@@ -25,9 +25,6 @@ public class ArticleDto {
     private CategorieDto categorie;
 
     public Article fromEntity(ArticleDto articleDto){
-        if(articleDto==null){
-            return null;
-        }
 
         return Article.builder()
                 .id(articleDto.getId())
