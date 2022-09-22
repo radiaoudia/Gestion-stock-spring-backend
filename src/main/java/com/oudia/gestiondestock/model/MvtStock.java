@@ -12,22 +12,22 @@ import java.time.Instant;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="mvt_stock")
-public class MvtStock extends AbstractEntity{
+@Table(name = "mvt_stock")
+public class MvtStock extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name="id_article")
+    @JoinColumn(name = "id_article")
     private Article article;
 
-    @Column(name="date_mvt")
+    @Column(name = "date_mvt")
     private Instant dateMvt;
 
-    @Column(name="quantite")
+    @Column(name = "quantite")
     private BigDecimal quantite;
 
-    @Column(name="type_mvt")
+    @Column(name = "type_mvt")
     private TypeMvtStk typeMvtStk;
 }

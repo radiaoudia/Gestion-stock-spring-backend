@@ -11,16 +11,16 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="categorie")
-public class Categorie extends AbstractEntity{
+@Table(name = "categorie")
+public class Categorie extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="code")
+    @Column(name = "code")
     private String code;
 
-    @Column(name="designation")
+    @Column(name = "designation")
     private String designation;
 
     @OneToMany(mappedBy = "categorie")

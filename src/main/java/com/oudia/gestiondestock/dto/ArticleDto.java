@@ -3,6 +3,7 @@ package com.oudia.gestiondestock.dto;
 import com.oudia.gestiondestock.model.Article;
 import lombok.Builder;
 import lombok.Data;
+
 import java.math.BigDecimal;
 
 @Builder
@@ -24,7 +25,10 @@ public class ArticleDto {
 
     private CategorieDto categorie;
 
-    public Article fromEntity(ArticleDto articleDto){
+    public Article fromEntity(ArticleDto articleDto) {
+        if (articleDto == null) {
+            return null;
+        }
 
         return Article.builder()
                 .id(articleDto.getId())
@@ -37,8 +41,9 @@ public class ArticleDto {
                 .categorie(articleDto.getCategorie().toEntity(articleDto.getCategorie()))
                 .build();
     }
-    public ArticleDto toEntity(Article article){
-        if(article==null){
+
+    public ArticleDto toEntity(Article article) {
+        if (article == null) {
             return null;
         }
 

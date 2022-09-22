@@ -4,6 +4,7 @@ import com.oudia.gestiondestock.model.Adresse;
 import com.oudia.gestiondestock.model.Client;
 import lombok.Builder;
 import lombok.Data;
+
 import java.util.List;
 
 @Data
@@ -25,8 +26,8 @@ public class ClientDto {
 
     private List<CommandeClientDto> commandeClients;
 
-    public Client fromEntity(ClientDto clientDto){
-        if(clientDto==null){
+    public Client fromEntity(ClientDto clientDto) {
+        if (clientDto == null) {
             return null;
         }
 
@@ -40,11 +41,11 @@ public class ClientDto {
                 .numTel(clientDto.getNumTel())
                 .build();
     }
-    public ClientDto toEntity(Client client){
-        if(client==null){
+
+    public ClientDto toEntity(Client client) {
+        if (client == null) {
             return null;
         }
-
         return ClientDto.builder()
                 .id(client.getId())
                 .nom(client.getNom())

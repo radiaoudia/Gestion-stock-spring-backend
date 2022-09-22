@@ -13,21 +13,21 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="commande_fournisseur")
-public class CommandeFournisseur extends AbstractEntity{
+@Table(name = "commande_fournisseur")
+public class CommandeFournisseur extends AbstractEntity {
 
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="code")
+    @Column(name = "code")
     private String code;
 
-    @Column(name="date_commande")
+    @Column(name = "date_commande")
     private Instant dateCommande;
 
     @ManyToOne
-    @JoinColumn(name="id_fournisseur")
+    @JoinColumn(name = "id_fournisseur")
     private Fournisseur fournisseur;
 
     @OneToMany(mappedBy = "commandeFournisseur")

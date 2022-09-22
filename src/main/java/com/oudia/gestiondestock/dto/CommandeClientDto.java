@@ -4,6 +4,7 @@ import com.oudia.gestiondestock.model.Client;
 import com.oudia.gestiondestock.model.CommandeClient;
 import lombok.Builder;
 import lombok.Data;
+
 import java.time.Instant;
 import java.util.List;
 
@@ -20,8 +21,8 @@ public class CommandeClientDto {
 
     private List<LigneCommandeClientDto> ligneCommandeClients;
 
-    public CommandeClient fromEntity(CommandeClientDto commandeClientDto){
-        if(commandeClientDto==null){
+    public CommandeClient fromEntity(CommandeClientDto commandeClientDto) {
+        if (commandeClientDto == null) {
             return null;
         }
 
@@ -32,19 +33,16 @@ public class CommandeClientDto {
                 .client(commandeClientDto.getClient().fromEntity(commandeClientDto.getClient()))
                 .build();
     }
-    public ClientDto toEntity(Client client){
-        if(client==null){
+
+    public CommandeClientDto toEntity(CommandeClient commandeClient) {
+        if (commandeClient == null) {
             return null;
         }
 
-        return ClientDto.builder()
-                .id(client.getId())
-                .nom(client.getNom())
-                .prenom(client.getPrenom())
-                .adresse(client.getAdresse())
-                .photo(client.getPhoto())
-                .mail(client.getMail())
-                .numTel(client.getNumTel())
+        return CommandeClientDto.builder()
+                .id(commandeClient.getId())
+                .code(commandeClient.getCode())
+                .dateCommande(commandeClient.getDateCommande())
                 .build();
     }
 }

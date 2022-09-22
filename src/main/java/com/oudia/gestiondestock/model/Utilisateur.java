@@ -12,31 +12,31 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="utilisateur")
-public class Utilisateur extends AbstractEntity{
+@Table(name = "utilisateur")
+public class Utilisateur extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="nom")
+    @Column(name = "nom")
     private String nom;
 
-    @Column(name="prenom")
+    @Column(name = "prenom")
     private String prenom;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name="date_de_naissance")
+    @Column(name = "date_de_naissance")
     private Instant dateDeNaissance;
 
-    @Column(name="mot_de_passe")
+    @Column(name = "mot_de_passe")
     private String motDePasse;
 
     @Embedded
     private Adresse adresse;
 
-    @Column(name="photo")
+    @Column(name = "photo")
     private String photo;
 
     @ManyToOne

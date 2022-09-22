@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.oudia.gestiondestock.model.Categorie;
 import lombok.Builder;
 import lombok.Data;
+
 import java.util.List;
 
 @Data
@@ -18,8 +19,8 @@ public class CategorieDto {
     @JsonIgnore
     private List<ArticleDto> Articles;
 
-    public CategorieDto fromEntity(Categorie categorie){
-        if(categorie==null){
+    public CategorieDto fromEntity(Categorie categorie) {
+        if (categorie == null) {
             return null;
         }
         return CategorieDto.builder()
@@ -29,8 +30,8 @@ public class CategorieDto {
                 .build();
     }
 
-    public Categorie toEntity(CategorieDto categorieDto){
-        if(categorieDto==null){
+    public Categorie toEntity(CategorieDto categorieDto) {
+        if (categorieDto == null) {
             return null;
             //TODO throw an exception
         }

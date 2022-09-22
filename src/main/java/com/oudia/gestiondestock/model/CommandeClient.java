@@ -12,22 +12,22 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="commande_client")
-public class CommandeClient extends AbstractEntity{
+@Table(name = "commande_client")
+public class CommandeClient extends AbstractEntity {
 
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="code")
+    @Column(name = "code")
     private String code;
 
-    @Column(name="date_commande")
+    @Column(name = "date_commande")
     private Instant dateCommande;
 
 
     @ManyToOne
-    @JoinColumn(name="id_client")
+    @JoinColumn(name = "id_client")
     private Client client;
 
     @OneToMany(mappedBy = "commandeClient")

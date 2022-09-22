@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="ligne_vente")
-public class LigneVente extends AbstractEntity{
+@Table(name = "ligne_vente")
+public class LigneVente extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
@@ -21,10 +21,10 @@ public class LigneVente extends AbstractEntity{
     @JoinColumn(name = "id_vente")
     private Vente vente;
 
-    @Column(name="quantite")
+    @Column(name = "quantite")
     private BigDecimal quantite;
 
-    @Column(name="prix_unitaire")
+    @Column(name = "prix_unitaire")
     private BigDecimal prixUnitaire;
 
 }

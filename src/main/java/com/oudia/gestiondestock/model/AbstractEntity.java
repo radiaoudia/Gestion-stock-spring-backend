@@ -18,12 +18,12 @@ import java.util.Date;
 public class AbstractEntity implements Serializable {
 
     @CreatedDate
-    @Column(name="creation_date",nullable = false)
+    @Column(name = "creation_date", nullable = false)
     @JsonIgnore
     private Instant creationDate;
 
     @LastModifiedDate
-    @Column(name="last_modified_date")
+    @Column(name = "last_modified_date")
     @JsonIgnore
     private Instant lastModifiedDate;
 

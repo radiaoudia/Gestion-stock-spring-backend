@@ -19,8 +19,8 @@ public class AdresseDto {
 
     private String pays;
 
-    public AdresseDto fromEntity(Adresse adresse){
-        if(adresse==null){
+    public AdresseDto fromEntity(Adresse adresse) {
+        if (adresse == null) {
             return null;
         }
         return AdresseDto
@@ -32,17 +32,18 @@ public class AdresseDto {
                 .pays(adresse.getPays())
                 .build();
     }
-    public Adresse toEntity(AdresseDto adresseDto){
-       if(adresseDto==null){
-           return null;
-       }
 
-       return Adresse.builder()
-               .adresse1(adresseDto.getAdresse1())
-               .adresse2(adresseDto.getAdresse2())
-               .codePostale(adresseDto.getCodePostale())
-               .ville(adresseDto.getVille())
-               .pays(adresseDto.getPays())
-               .build();
+    public Adresse toEntity(AdresseDto adresseDto) {
+        if (adresseDto == null) {
+            return null;
+        }
+
+        return Adresse.builder()
+                .adresse1(adresseDto.getAdresse1())
+                .adresse2(adresseDto.getAdresse2())
+                .codePostale(adresseDto.getCodePostale())
+                .ville(adresseDto.getVille())
+                .pays(adresseDto.getPays())
+                .build();
     }
 }

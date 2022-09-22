@@ -10,13 +10,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="role")
-public class Role extends AbstractEntity{
+@Table(name = "role")
+public class Role extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="nom_role")
+    @Column(name = "nom_role")
     private String nomRole;
 
     @ManyToOne

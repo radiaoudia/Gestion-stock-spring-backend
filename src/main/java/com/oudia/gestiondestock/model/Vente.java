@@ -11,7 +11,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="vente")
+@Table(name = "vente")
 public class Vente extends AbstractEntity {
     @Id
     @GeneratedValue

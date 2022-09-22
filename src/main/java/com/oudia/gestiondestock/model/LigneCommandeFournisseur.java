@@ -11,23 +11,23 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="ligne_commande_fournisseur")
-public class LigneCommandeFournisseur extends AbstractEntity{
+@Table(name = "ligne_commande_fournisseur")
+public class LigneCommandeFournisseur extends AbstractEntity {
     @Id
     @GeneratedValue
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name="id_article")
+    @JoinColumn(name = "id_article")
     private Article article;
 
     @ManyToOne
     @JoinColumn(name = "id_commande_fournisseur")
     private CommandeFournisseur commandeFournisseur;
 
-    @Column(name="quantite")
+    @Column(name = "quantite")
     private BigDecimal quantite;
 
-    @Column(name="prix_unitaire")
+    @Column(name = "prix_unitaire")
     private BigDecimal prixUnitaire;
 }

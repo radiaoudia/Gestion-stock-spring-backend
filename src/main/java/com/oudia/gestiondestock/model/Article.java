@@ -11,33 +11,33 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name="article")
-public class Article extends AbstractEntity{
+@Table(name = "article")
+public class Article extends AbstractEntity {
 
     @Id
     @GeneratedValue
     private Integer id;
 
-    @Column(name="code")
+    @Column(name = "code")
     private String code;
 
-    @Column(name="designation")
+    @Column(name = "designation")
     private String designation;
 
-    @Column(name="prix_unitaire_ht")
+    @Column(name = "prix_unitaire_ht")
     private BigDecimal prixUnitaireHt;
 
-    @Column(name="taux_tva")
+    @Column(name = "taux_tva")
     private BigDecimal tauxTva;
 
-    @Column(name="prix_unitaire_ttc")
+    @Column(name = "prix_unitaire_ttc")
     private BigDecimal prixUnitaireTtc;
 
-    @Column(name="photo")
+    @Column(name = "photo")
     private String photo;
 
     @ManyToOne
-    @JoinColumn(name="id_category")
+    @JoinColumn(name = "id_category")
     private Categorie categorie;
 
 }
