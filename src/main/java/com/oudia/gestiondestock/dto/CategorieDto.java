@@ -36,6 +36,7 @@ public class CategorieDto {
             //TODO throw an exception
         }
         return Categorie.builder()
+                .id(categorieDto.getId())
                 .code(categorieDto.getCode())
                 .designation(categorieDto.getDesignation())
                 .build();

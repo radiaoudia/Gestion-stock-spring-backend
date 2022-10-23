@@ -1,6 +1,5 @@
 package com.oudia.gestiondestock.dto;
 
-import com.oudia.gestiondestock.model.CommandeFournisseur;
 import com.oudia.gestiondestock.model.LigneCommandeClient;
 import lombok.Builder;
 import lombok.Data;

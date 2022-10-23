@@ -46,7 +46,6 @@ public class ArticleDto {
         if (article == null) {
             return null;
         }
-
         return ArticleDto.builder()
                 .id(article.getId())
                 .code(article.getCode())
