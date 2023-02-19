@@ -25,10 +25,12 @@ public class CommandeClient extends AbstractEntity {
     @Column(name = "date_commande")
     private Instant dateCommande;
 
-
     @ManyToOne
     @JoinColumn(name = "id_client")
     private Client client;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 
     @OneToMany(mappedBy = "commandeClient")
     private List<LigneCommandeClient> ligneCommandeClients;
